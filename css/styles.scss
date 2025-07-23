@@ -3,7 +3,41 @@ $second-color : #FF79DA;
 $tertiary-color : #99E2D0;
 $police-logo : Shrikhand;
 $police-text : Roboto;
+/*var graphic*/
 
-body {
+body{
     font-family: $police-text;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    .logo_link {
+        padding: 2rem 100%;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem 100%;
+        background-color: rgb(226, 226, 226);
+
+        i {
+            margin: 0 0.5rem;
+            height: 100%;
+        }
+
+        input {
+            border: none;
+            background-color: rgb(226, 226, 226);
+            height: 100%;
+
+        }
+    }
+
 }
