@@ -113,12 +113,12 @@ main .fonctionnement h3 {
 main .fonctionnement div {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   background: rgb(246, 246, 246);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   height: 73px;
+  margin: 10px 0;
 }
 main .fonctionnement div .puce {
   background: rgb(147, 86, 220);
@@ -129,4 +129,18 @@ main .fonctionnement div .puce {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 10px;
+}
+main .fonctionnement div i {
+  color: rgb(126, 126, 126);
+  position: relative;
+  left: 30px;
+}
+main .fonctionnement div .fa-store {
+  color: rgb(147, 86, 220);
+}
+main .fonctionnement div p {
+  position: relative;
+  left: 50px;
 }/*# sourceMappingURL=styles.css.map */
