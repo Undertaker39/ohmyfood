@@ -105,21 +105,21 @@ main {
             color: white;
             text-decoration: none;
             border-radius: 25px;
-            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            background: linear-gradient( $second-color, $primary-color);
             box-shadow: 0px 4px 10px 0px #00000040;
             margin: 30px auto;
+            transition: all 500ms ease-in-out;
 
             &:active,
             &:hover{
-                background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
-                linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-                box-shadow: 0px 4px 15px 0px #00000059;
+                opacity:0.7 ;
+                box-shadow: 0px 4px 15px 2px #00000059;
             }
         }
     }
 
-    .fonctionnement{
-        height: 440px;
+    .fonctionnement {
+        height: 380px;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -151,13 +151,14 @@ main {
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                left: 10px;
+                left: 7px;
             }
 
             i {
                 color: rgba(126, 126, 126, 1);
                 position: relative;
                 left: 30px;
+                font-size: 20px;
             }
 
             .fa-store {
@@ -165,11 +166,121 @@ main {
             }
 
             p {
-                position: relative;
-                left: 50px;
+                position: absolute;
+                left: 90px;
             }
         }
     }
 
+    .restaurant {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .restaurant-card {
+            background: white;
+            border-radius: 15px;
+            margin: 10px 0;
+            height: 251px;
+            position: relative;
+
+            a {
+                height: 251px;
+                text-decoration: none;
+                color: initial;
+
+                img {
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                    object-position: center;
+                    height: 171px;
+                    width: 100%;
+                }
+
+                .restaurant-card-text {
+                    height: 80px;
+                    padding: 10px ;
+
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin: 5px 0;
+                    }
+
+                    p {
+                        font-size: 17px;
+                        font-weight: 300;
+                        margin: 5px 0;
+                    }
+
+                }
+
+                .new {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1;
+                    width: 80px;
+                    height: 29px;
+                    border-radius: 2px;
+                    color: #008766;
+                    background-color: $tertiary-color;
+                    font-size: 14px;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 211px;
+                }
+
+                &:active > .new {
+                    visibility: hidden;
+                } 
+            }
+
+            .like {
+                height: 21px;
+                width: 21px;
+                position: absolute;
+                bottom: 30px;
+                right: 20px;
+                font-size: 21px;
+
+                .fa-regular {
+                    z-index: 1;
+                    
+                    &:active,
+                    &:hover{
+                        visibility: hidden;
+                    }
+
+                }
+
+                .fa-solid {
+                    position: relative;
+                    bottom: 22px;
+                    z-index: 0;
+                    background: linear-gradient( $primary-color, $second-color);
+                    background-clip: text;
+                    color: transparent;
+                    opacity: 0;
+                    transition: opacity 500ms;
+
+                    &:active,
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+                
+               
+            }
+        }
+    }
 }
 
