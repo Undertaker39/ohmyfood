@@ -4,6 +4,7 @@ $tertiary-color : #99E2D0;
 $nav-text-color : #353535;
 $nav-background-color : #eaeaea; 
 $main--background-color : #f6f6f6;
+$footer-background-color : #353535;
 $police-logo : Shrikhand;
 $police-text : Roboto;
 /*var graphic*/
@@ -255,7 +256,7 @@ main {
                     z-index: 1;
                     
                     &:active,
-                    &:hover{
+                    &:hover {
                         visibility: hidden;
                     }
 
@@ -284,3 +285,51 @@ main {
     }
 }
 
+footer{
+    background-color: $footer-background-color;
+    opacity: 1;
+    color: white;
+    height: 186px;
+    padding: 22px 25px;
+
+    h1 {
+        font-family: $police-logo;
+        font-weight: 400;
+        font-size: 18px;
+        padding: 20px 0;
+
+    }
+
+    .footer-text {
+
+        font-family: $police-text;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 10px 0;
+        position: relative;
+
+        .footer-text-lign {
+            font-weight: 500;
+            display: flex;
+            flex-direction: row;
+            margin: 15px 0;
+            align-items: center;
+
+            i {
+                font-size: 11px;
+                margin: 3px 0;
+            }
+
+            .footer-text-lign-i {
+                position: absolute;
+                left: 20px;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+      
+    }
+}

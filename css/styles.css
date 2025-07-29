@@ -237,4 +237,44 @@ main .restaurant .restaurant-card .like .fa-solid {
 }
 main .restaurant .restaurant-card .like .fa-solid:active, main .restaurant .restaurant-card .like .fa-solid:hover {
   opacity: 1;
+}
+
+footer {
+  background-color: #353535;
+  opacity: 1;
+  color: white;
+  height: 186px;
+  padding: 22px 25px;
+}
+footer h1 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px 0;
+}
+footer .footer-text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
+  position: relative;
+}
+footer .footer-text .footer-text-lign {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: center;
+}
+footer .footer-text .footer-text-lign i {
+  font-size: 11px;
+  margin: 3px 0;
+}
+footer .footer-text .footer-text-lign .footer-text-lign-i {
+  position: absolute;
+  left: 20px;
+}
+footer .footer-text .footer-text-lign a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
