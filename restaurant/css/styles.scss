@@ -1,0 +1,225 @@
+$primary-color : #9356DC;
+$second-color : #FF79DA;
+$tertiary-color : #99E2D0;
+$nav-text-color : #353535;
+$nav-background-color : #eaeaea; 
+$main--background-color : #f6f6f6;
+$footer-background-color : #353535;
+$police-logo : Shrikhand;
+$police-text : Roboto;
+/*var graphic*/
+
+body{
+    font-family: $police-text;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 63px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+
+    .back  {
+        position: absolute;
+        left: 20px;
+        
+        a {
+            color: #353535;
+
+            i {
+                font-size: 17px;
+            }  
+        }
+    }
+
+    .logo_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 63px;
+        width: 100%;
+        
+        img{
+            height: 30px;
+        }
+    }
+    
+
+}
+
+main {
+    background-color: $main--background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+        .img-background {
+
+            img {
+                    object-fit: cover;
+                    object-position: center;
+                    height: 250px;
+                    width: 100%;
+            }
+        }
+
+        .card {
+            background-color: $main--background-color;
+            width: 100%;
+            position: relative;
+            border-radius: 30px 30px 0 0;
+            bottom: 50px;
+            z-index: 1;
+
+            
+            .head {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 20px;
+                position: relative;
+
+                h1 {
+                    font-family: Shrikhand;
+                    font-weight: 400;
+                    font-size: 28px;
+
+                }
+
+                .like {
+                height: 21px;
+                width: 21px;
+                font-size: 21px;
+                position: absolute;
+                right: 40px;
+                
+                    .fa-regular {
+                    z-index: 1;
+                    
+                    &:active,
+                    &:hover {
+                        visibility: hidden;
+                    }
+
+                }
+
+                    .fa-solid {
+                    position: relative;
+                    bottom: 22px;
+                    z-index: 0;
+                    background: linear-gradient( $primary-color, $second-color);
+                    background-clip: text;
+                    color: transparent;
+                    opacity: 0;
+                    transition: opacity 500ms;
+
+                    &:active,
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+                
+               
+            }
+            
+            }
+
+            .plats{
+                padding: 20px;
+
+                h2 {
+                    font-weight: 300;
+                    font-size: 16px;
+
+                }
+
+                .repas {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .nom {
+                        h3 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        padding: 0 0 10px 0;
+                        }
+
+                        p {
+                            font-weight: 300;
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .prix {
+                    font-weight: 700;
+                    font-size: 15px;
+
+                }
+
+                i{
+                    font-size: 20px;
+                    border-radius: 50%;
+                    border: solid;
+                    color: white;
+                    background-color: $tertiary-color;
+                }
+            }
+        }
+    }
+footer{
+    background-color: $footer-background-color;
+    opacity: 1;
+    color: white;
+    height: 186px;
+    padding: 22px 25px;
+
+    h1 {
+        font-family: $police-logo;
+        font-weight: 400;
+        font-size: 18px;
+        padding: 20px 0;
+
+    }
+
+    .footer-text {
+
+        font-family: $police-text;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 10px 0;
+        position: relative;
+
+        .footer-text-lign {
+            font-weight: 500;
+            display: flex;
+            flex-direction: row;
+            margin: 15px 0;
+            align-items: center;
+
+            i {
+                font-size: 11px;
+                margin: 3px 0;
+            }
+
+            .footer-text-lign-i {
+                position: absolute;
+                left: 20px;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+      
+    }
+}
