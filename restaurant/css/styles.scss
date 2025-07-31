@@ -131,47 +131,100 @@ main {
             .plats{
                 padding: 20px;
 
-                h2 {
-                    font-weight: 300;
-                    font-size: 16px;
+                .titre {
+                    margin: 0 0 10px 0;
+                    position: relative;
+                    height: 27px;
+                    width: 100%;
 
+                    h2 {
+                        font-weight: 300;
+                        font-size: 16px;
+
+                    }
+
+                    hr {
+                        border: 3px solid $tertiary-color;
+                        width: 40px;
+                        position: absolute;
+                    }
                 }
-
                 .repas {
                     background: white;
                     border-radius: 15px;
-                    padding: 15px;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    align-items: center;
+                    position: relative;
 
-                    .nom {
-                        h3 {
-                        font-weight: 500;
-                        font-size: 18px;
-                        padding: 0 0 10px 0;
+                    .repas-front {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        z-index: 2;
+                        background-color: white;
+                        border-radius: 15px;
+                        padding: 15px;
+                        transition: all 500ms;
+
+                        &:active,
+                        &:hover {
+                            margin-right: 60px;
+                            border-radius: 15px 0 0 15px;
+                        }
+                        
+                        .nom {
+                            h3 {
+                            font-weight: 500;
+                            font-size: 18px;
+                            padding: 0 0 10px 0;
+                            }
+
+                            p {
+                                font-weight: 300;
+                                font-size: 15px;
+                            }
                         }
 
-                        p {
-                            font-weight: 300;
+                        .prix {
+                            font-weight: 700;
                             font-size: 15px;
+                            display: flex;
+                            align-items: end;
                         }
                     }
+
+                    .repas-back {
+                        display: flex;
+                        z-index: 1;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        background-color: $tertiary-color ;
+                        align-items: center;
+                        justify-content: end;
+                        border-radius: 15px;
+                        right: 0px;
+                        
+                        i{
+                            position: absolute;
+                            right: 20px;
+                            font-size: 20px;
+                            border-radius: 50%;
+                            border: solid;
+                            color: white;
+                            background-color: $tertiary-color;
+                        }
+                    }
+                    
                 }
 
-                .prix {
-                    font-weight: 700;
-                    font-size: 15px;
+                
 
-                }
-
-                i{
-                    font-size: 20px;
-                    border-radius: 50%;
-                    border: solid;
-                    color: white;
-                    background-color: $tertiary-color;
-                }
+                
             }
         }
     }

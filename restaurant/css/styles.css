@@ -97,32 +97,76 @@ main .card .head .like .fa-solid:active, main .card .head .like .fa-solid:hover 
 main .card .plats {
   padding: 20px;
 }
-main .card .plats h2 {
+main .card .plats .titre {
+  margin: 0 0 10px 0;
+  position: relative;
+  height: 27px;
+  width: 100%;
+}
+main .card .plats .titre h2 {
   font-weight: 300;
   font-size: 16px;
+}
+main .card .plats .titre hr {
+  border: 3px solid #99E2D0;
+  width: 40px;
+  position: absolute;
 }
 main .card .plats .repas {
   background: white;
   border-radius: 15px;
-  padding: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
-main .card .plats .repas .nom h3 {
+main .card .plats .repas .repas-front {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 500ms;
+}
+main .card .plats .repas .repas-front:active, main .card .plats .repas .repas-front:hover {
+  margin-right: 60px;
+  border-radius: 15px 0 0 15px;
+}
+main .card .plats .repas .repas-front .nom h3 {
   font-weight: 500;
   font-size: 18px;
   padding: 0 0 10px 0;
 }
-main .card .plats .repas .nom p {
+main .card .plats .repas .repas-front .nom p {
   font-weight: 300;
   font-size: 15px;
 }
-main .card .plats .prix {
+main .card .plats .repas .repas-front .prix {
   font-weight: 700;
   font-size: 15px;
+  display: flex;
+  align-items: end;
 }
-main .card .plats i {
+main .card .plats .repas .repas-back {
+  display: flex;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: end;
+  border-radius: 15px;
+  right: 0px;
+}
+main .card .plats .repas .repas-back i {
+  position: absolute;
+  right: 20px;
   font-size: 20px;
   border-radius: 50%;
   border: solid;
