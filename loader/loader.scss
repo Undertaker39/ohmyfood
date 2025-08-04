@@ -1,0 +1,58 @@
+.loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    animation: loadertime 3s ease 0ms 1 normal forwards;
+   
+    @keyframes loadertime {
+
+        0% {visibility: visible;}
+        99.99% {visibility: visible;height: 200px; width: 100%;}
+        99.999% {visibility: hidden; height: 200px; width: 100%;}
+        100% {visibility: hidden; height: 0; width: 0;}    
+    }
+
+    p {
+        font-family: Shrikhand;
+        font-weight: 900;
+        font-size: 50px;
+        animation: loaderlogo 1s ease 50ms 3 normal none;
+        background: linear-gradient(0deg ,rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 33%, rgba(153, 226, 208, 1) 76%);
+        color: transparent;
+        background-clip: text;
+    }
+    
+    .loader-letter {
+
+        @for $i from 1 through 8 {
+            &-#{$i} {
+                animation-delay: 60ms * $i;
+            }
+        }
+    }
+    
+    @keyframes loaderlogo {
+
+        0% {transform: translateY(0px);}
+
+        50% {transform: translateY(-20px);}
+
+        100% {transform: translateY(0);}
+        
+    }
+
+}
+
+body {
+    animation: content 1s ease 3s 1 normal forwards;
+    visibility: hidden;
+
+    @keyframes content {
+        0% {opacity: 0;}
+
+        100% {visibility: visible;}
+  
+    }
+}

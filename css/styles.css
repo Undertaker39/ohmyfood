@@ -1,4 +1,93 @@
 /*var graphic*/
+/*Animation*/
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  animation: loadertime 3s ease 0ms 1 normal forwards;
+}
+@keyframes loadertime {
+  0% {
+    visibility: visible;
+  }
+  99.99% {
+    visibility: visible;
+    height: 200px;
+    width: 100%;
+  }
+  99.999% {
+    visibility: hidden;
+    height: 200px;
+    width: 100%;
+  }
+  100% {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+.loader p {
+  font-family: Shrikhand;
+  font-weight: 900;
+  font-size: 50px;
+  animation: loaderlogo 1s ease 50ms 3 normal none;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 33%, rgb(153, 226, 208) 76%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.loader .loader-letter-1 {
+  animation-delay: 60ms;
+}
+.loader .loader-letter-2 {
+  animation-delay: 120ms;
+}
+.loader .loader-letter-3 {
+  animation-delay: 180ms;
+}
+.loader .loader-letter-4 {
+  animation-delay: 240ms;
+}
+.loader .loader-letter-5 {
+  animation-delay: 300ms;
+}
+.loader .loader-letter-6 {
+  animation-delay: 360ms;
+}
+.loader .loader-letter-7 {
+  animation-delay: 420ms;
+}
+.loader .loader-letter-8 {
+  animation-delay: 480ms;
+}
+@keyframes loaderlogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header, main, footer {
+  animation: content 1s ease 3s 1 normal forwards;
+  visibility: hidden;
+}
+@keyframes content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+/*Animation*/
 body {
   font-family: Roboto;
   width: 100%;
@@ -67,10 +156,10 @@ main .reservation h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-main .reservation h1 div {
-  display: flex;
-  justify-content: center;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 main .reservation h2 {
   display: flex;
@@ -79,6 +168,9 @@ main .reservation h2 {
   align-items: center;
   font-size: 18px;
   font-weight: 300;
+  text-align: center;
+  width: 320px;
+  flex-wrap: wrap;
 }
 main .reservation .button {
   display: flex;

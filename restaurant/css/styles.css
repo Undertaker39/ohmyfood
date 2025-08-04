@@ -1,4 +1,33 @@
 /*var graphic*/
+/*Animation*/
+.card .head {
+  animation: slid 500ms ease-out 0ms 1 normal forwards;
+}
+.card .plats .titre h2 {
+  animation: slid 500ms ease-out 100ms 1 normal forwards;
+}
+.card .plats .titre hr {
+  animation: slid 500ms ease-out 200ms 1 normal forwards;
+}
+.card .plats .repas {
+  animation: slid 500ms ease-out 300ms 1 normal forwards;
+}
+.card .repas {
+  animation: slid 500ms ease-out 400ms 1 normal forwards;
+}
+
+@keyframes slid {
+  0% {
+    transform: translateX(-5000000px);
+  }
+  1% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*Animation*/
 body {
   font-family: Roboto;
   width: 100%;
