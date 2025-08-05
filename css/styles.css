@@ -203,7 +203,7 @@ main .fonctionnement h3 {
   font-weight: 700;
   margin: 30px 0;
 }
-main .fonctionnement div {
+main .fonctionnement .etape div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -213,7 +213,7 @@ main .fonctionnement div {
   height: 73px;
   margin: 10px 0;
 }
-main .fonctionnement div .puce {
+main .fonctionnement .etape div .puce {
   background: rgb(147, 86, 220);
   color: white;
   border-radius: 100px;
@@ -225,16 +225,16 @@ main .fonctionnement div .puce {
   position: absolute;
   left: 7px;
 }
-main .fonctionnement div i {
+main .fonctionnement .etape div i {
   color: rgb(126, 126, 126);
   position: relative;
   left: 30px;
   font-size: 20px;
 }
-main .fonctionnement div .fa-store {
+main .fonctionnement .etape div .fa-store {
   color: rgb(147, 86, 220);
 }
-main .fonctionnement div p {
+main .fonctionnement .etape div p {
   position: absolute;
   left: 90px;
 }
@@ -249,19 +249,19 @@ main .restaurant h3 {
   font-weight: 700;
   margin: 10px 0;
 }
-main .restaurant .restaurant-card {
+main .restaurant div .restaurant-card {
   background: white;
   border-radius: 15px;
   margin: 10px 0;
   height: 251px;
   position: relative;
 }
-main .restaurant .restaurant-card a {
+main .restaurant div .restaurant-card a {
   height: 251px;
   text-decoration: none;
   color: initial;
 }
-main .restaurant .restaurant-card a img {
+main .restaurant div .restaurant-card a img {
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -270,21 +270,21 @@ main .restaurant .restaurant-card a img {
   height: 171px;
   width: 100%;
 }
-main .restaurant .restaurant-card a .restaurant-card-text {
+main .restaurant div .restaurant-card a .restaurant-card-text {
   height: 80px;
   padding: 10px;
 }
-main .restaurant .restaurant-card a .restaurant-card-text h4 {
+main .restaurant div .restaurant-card a .restaurant-card-text h4 {
   font-size: 18px;
   font-weight: 700;
   margin: 5px 0;
 }
-main .restaurant .restaurant-card a .restaurant-card-text p {
+main .restaurant div .restaurant-card a .restaurant-card-text p {
   font-size: 17px;
   font-weight: 300;
   margin: 5px 0;
 }
-main .restaurant .restaurant-card a .new {
+main .restaurant div .restaurant-card a .new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,10 +299,10 @@ main .restaurant .restaurant-card a .new {
   right: 15px;
   bottom: 211px;
 }
-main .restaurant .restaurant-card a:active > .new {
+main .restaurant div .restaurant-card a:active > .new {
   visibility: hidden;
 }
-main .restaurant .restaurant-card .like {
+main .restaurant div .restaurant-card .like {
   height: 21px;
   width: 21px;
   position: absolute;
@@ -310,13 +310,13 @@ main .restaurant .restaurant-card .like {
   right: 20px;
   font-size: 21px;
 }
-main .restaurant .restaurant-card .like .fa-regular {
+main .restaurant div .restaurant-card .like .fa-regular {
   z-index: 1;
 }
-main .restaurant .restaurant-card .like .fa-regular:active, main .restaurant .restaurant-card .like .fa-regular:hover {
+main .restaurant div .restaurant-card .like .fa-regular:active, main .restaurant div .restaurant-card .like .fa-regular:hover {
   visibility: hidden;
 }
-main .restaurant .restaurant-card .like .fa-solid {
+main .restaurant div .restaurant-card .like .fa-solid {
   position: relative;
   bottom: 22px;
   z-index: 0;
@@ -327,7 +327,7 @@ main .restaurant .restaurant-card .like .fa-solid {
   opacity: 0;
   transition: opacity 500ms;
 }
-main .restaurant .restaurant-card .like .fa-solid:active, main .restaurant .restaurant-card .like .fa-solid:hover {
+main .restaurant div .restaurant-card .like .fa-solid:active, main .restaurant div .restaurant-card .like .fa-solid:hover {
   opacity: 1;
 }
 
@@ -369,4 +369,79 @@ footer .footer-text .footer-text-lign .footer-text-lign-i {
 footer .footer-text .footer-text-lign a {
   text-decoration: none;
   color: white;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*responsive*/
+@media (min-width: 768px) {
+  main .reservation h1 {
+    width: auto;
+  }
+  main .reservation h2 {
+    width: auto;
+  }
+  footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+  footer .footer-text {
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .footer-text .footer-text-lign {
+    margin: 15px 15px 12.5px 0px;
+  }
+  footer .footer-text .footer-text-lign i {
+    margin: 3px;
+  }
+  footer .footer-text .footer-text-lign .footer-text-lign-i {
+    position: initial;
+  }
+}
+@media (min-width: 1024px) {
+  main .fonctionnement {
+    height: 228px;
+  }
+  main .fonctionnement h3 {
+    margin: 20px;
+  }
+  main .fonctionnement .etape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main .fonctionnement .etape div {
+    width: 30%;
+  }
+  main .fonctionnement .etape div .puce {
+    position: relative;
+    left: -15px;
+  }
+  main .fonctionnement .etape div i {
+    position: initial;
+    margin-right: 10px;
+  }
+  main .fonctionnement .etape div p {
+    position: initial;
+  }
+  main .restaurant h3 {
+    margin: 10px 0 10px 5%;
+  }
+  main .restaurant div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .restaurant div .restaurant-card {
+    margin: 20px 0;
+    width: 40%;
+  }
+  main .restaurant div .restaurant-card .restaurant-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+/*responsive*//*# sourceMappingURL=styles.css.map */
