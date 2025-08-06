@@ -139,6 +139,10 @@ main {
                     font-family: Shrikhand;
                     font-weight: 400;
                     font-size: 28px;
+                    width: 80%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                 }
 
@@ -204,11 +208,11 @@ main {
                 }
 
                 .repas {
+                    width: 100%;
                     background: white;
                     border-radius: 15px;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
                     align-items: center;
                     position: relative;
                     margin-bottom: 10px;
@@ -229,18 +233,22 @@ main {
                         &:hover {
                             margin-right: 60px;
                             border-radius: 15px 0 0 15px;
+                            
                         }
                         
                         .nom {
+
                             h3 {
-                            font-weight: 500;
-                            font-size: 18px;
-                            padding: 0 0 10px 0;
+                                font-weight: 500;
+                                font-size: 18px;
+                                padding: 0 0 10px 0;
                             }
 
                             p {
+                                width: 92%;
                                 font-weight: 300;
                                 font-size: 15px;
+
                             }
                         }
 

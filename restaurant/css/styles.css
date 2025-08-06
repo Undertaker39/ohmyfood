@@ -98,6 +98,10 @@ main .card .head h1 {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 28px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card .head .like {
   height: 21px;
@@ -145,11 +149,11 @@ main .card .plats .titre hr {
   position: absolute;
 }
 main .card .plats .repas {
+  width: 100%;
   background: white;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   margin-bottom: 10px;
@@ -176,6 +180,7 @@ main .card .plats .repas .repas-front .nom h3 {
   padding: 0 0 10px 0;
 }
 main .card .plats .repas .repas-front .nom p {
+  width: 92%;
   font-weight: 300;
   font-size: 15px;
 }
