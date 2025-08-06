@@ -173,15 +173,25 @@ main .card .plats .repas .repas-front {
 main .card .plats .repas .repas-front:active, main .card .plats .repas .repas-front:hover {
   margin-right: 60px;
   border-radius: 15px 0 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .card .plats .repas .repas-front .nom {
+  width: 92%;
 }
 main .card .plats .repas .repas-front .nom h3 {
   font-weight: 500;
   font-size: 18px;
   padding: 0 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card .plats .repas .repas-front .nom p {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card .plats .repas .repas-front .prix {
   font-weight: 700;
