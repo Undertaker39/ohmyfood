@@ -347,14 +347,19 @@ footer{
             margin: 15px 0;
             align-items: center;
 
-            i {
-                font-size: 11px;
-                margin: 3px 0;
-            }
+            a {
+                display: flex;
+                flex-direction: row;
+            
+                i {
+                    font-size: 11px;
+                    margin: 3px 0;
+                }
 
-            .footer-text-lign-i {
+                .footer-text-lign-i {
                 position: absolute;
                 left: 20px;
+                }
             }
 
             a{
@@ -392,13 +397,16 @@ footer{
             .footer-text-lign{
                 margin: 15px 15px 12.5px 0px;
 
-                i {
-                    margin: 3px;
-                }
+                a{
+                    i {
+                        margin: 3px;
+                    }
 
-               .footer-text-lign-i{
-                position: initial;
-                } 
+                    .footer-text-lign-i{
+                        position: initial;
+                    }  
+                }
+                
             }
             
         }
