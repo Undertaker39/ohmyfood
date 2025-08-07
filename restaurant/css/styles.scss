@@ -9,6 +9,18 @@ $police-logo : Shrikhand;
 $police-text : Roboto;
 /*var graphic*/
 
+/*mixin*/
+@mixin flex-row  {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+/*mixin*/
+
 /*Animation*/
 
 .card {
@@ -69,9 +81,8 @@ body{
 }
 
 header {
-    display: flex;
+    @include flex-row;
     align-items: center;
-    flex-direction: row;
     height: 63px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     position: relative;
@@ -100,14 +111,11 @@ header {
             height: 30px;
         }
     }
-    
-
 }
 
 main {
+    @include flex-column;
     background-color: $main--background-color;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 
         .img-background {
@@ -129,14 +137,13 @@ main {
             z-index: 1;
 
             .head {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 align-items: center;
                 padding: 20px;
                 position: relative;
 
                 h1 {
-                    font-family: Shrikhand;
+                    font-family: $police-logo;
                     font-weight: 400;
                     font-size: 28px;
                     width: 80%;
@@ -208,20 +215,18 @@ main {
                 }
 
                 .repas {
+                    @include flex-row;
                     width: 100%;
                     background: white;
                     border-radius: 15px;
-                    display: flex;
-                    flex-direction: row;
                     align-items: center;
                     position: relative;
                     margin-bottom: 10px;
 
                     .repas-front {
+                        @include flex-row;
                         height: 100%;
                         width: 100%;
-                        display: flex;
-                        flex-direction: row;
                         justify-content: space-between;
                         z-index: 2;
                         background-color: white;
@@ -341,15 +346,13 @@ footer{
         position: relative;
 
         .footer-text-lign {
+            @include flex-row;
             font-weight: 500;
-            display: flex;
-            flex-direction: row;
             margin: 15px 0;
             align-items: center;
 
             a {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
             
                 i {
                     font-size: 11px;
