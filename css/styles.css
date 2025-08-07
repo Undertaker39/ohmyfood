@@ -358,11 +358,15 @@ footer .footer-text .footer-text-lign {
   margin: 15px 0;
   align-items: center;
 }
-footer .footer-text .footer-text-lign i {
+footer .footer-text .footer-text-lign a {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer-text .footer-text-lign a i {
   font-size: 11px;
   margin: 3px 0;
 }
-footer .footer-text .footer-text-lign .footer-text-lign-i {
+footer .footer-text .footer-text-lign a .footer-text-lign-i {
   position: absolute;
   left: 20px;
 }
@@ -392,10 +396,10 @@ footer .footer-text .footer-text-lign a {
   footer .footer-text .footer-text-lign {
     margin: 15px 15px 12.5px 0px;
   }
-  footer .footer-text .footer-text-lign i {
+  footer .footer-text .footer-text-lign a i {
     margin: 3px;
   }
-  footer .footer-text .footer-text-lign .footer-text-lign-i {
+  footer .footer-text .footer-text-lign a .footer-text-lign-i {
     position: initial;
   }
 }
