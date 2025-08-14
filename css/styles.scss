@@ -343,6 +343,13 @@ main {
                         background: linear-gradient( $primary-color, $second-color);
                         background-clip: text;
                         color: transparent;
+                        transition: opacity 500ms;
+                        opacity: 0;
+
+                        &:active,
+                        &:hover {
+                            opacity: 1;
+                        }
 
 
                     }
@@ -509,6 +516,40 @@ footer{
                     .restaurant-card-text{
                         @include flex-column;
                         justify-content: start;
+                    }
+                    
+                    .like {
+                        height: 21px;
+                        width: 21px;
+                        position: absolute;
+                        bottom: 30px;
+                        right: 20px;
+                        font-size: 21px;
+
+                        .fa-regular {
+                            z-index: 1;
+                            background: white;
+                            transition: opacity 500ms;
+
+                            &:active,
+                            &:hover {
+                                opacity: 0;
+                            }
+
+                        }
+
+                        .fa-solid {
+                            position: relative;
+                            bottom: 22px;
+                            z-index: 0;
+                            background: linear-gradient( $primary-color, $second-color);
+                            background-clip: text;
+                            color: transparent;
+                            opacity: 1;
+
+                        }
+                
+               
                     }
                 }
             }

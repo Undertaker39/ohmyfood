@@ -328,6 +328,11 @@ main .restaurant div .restaurant-card .like .fa-solid {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transition: opacity 500ms;
+  opacity: 0;
+}
+main .restaurant div .restaurant-card .like .fa-solid:active, main .restaurant div .restaurant-card .like .fa-solid:hover {
+  opacity: 1;
 }
 
 footer {
@@ -445,6 +450,32 @@ footer .footer-text .footer-text-lign a {
     display: flex;
     flex-direction: column;
     justify-content: start;
+  }
+  main .restaurant div .restaurant-card .like {
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-size: 21px;
+  }
+  main .restaurant div .restaurant-card .like .fa-regular {
+    z-index: 1;
+    background: white;
+    transition: opacity 500ms;
+  }
+  main .restaurant div .restaurant-card .like .fa-regular:active, main .restaurant div .restaurant-card .like .fa-regular:hover {
+    opacity: 0;
+  }
+  main .restaurant div .restaurant-card .like .fa-solid {
+    position: relative;
+    bottom: 22px;
+    z-index: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    opacity: 1;
   }
 }
 /*responsive*//*# sourceMappingURL=styles.css.map */
