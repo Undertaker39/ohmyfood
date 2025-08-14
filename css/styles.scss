@@ -326,10 +326,12 @@ main {
 
                     .fa-regular {
                         z-index: 1;
+                        background: white;
+                        transition: opacity 500ms;
                         
                         &:active,
                         &:hover {
-                            visibility: hidden;
+                            opacity: 0;
                         }
 
                     }
@@ -341,13 +343,7 @@ main {
                         background: linear-gradient( $primary-color, $second-color);
                         background-clip: text;
                         color: transparent;
-                        opacity: 0;
-                        transition: opacity 500ms;
 
-                        &:active,
-                        &:hover {
-                            opacity: 1;
-                        }
 
                     }
                 

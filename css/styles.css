@@ -314,9 +314,11 @@ main .restaurant div .restaurant-card .like {
 }
 main .restaurant div .restaurant-card .like .fa-regular {
   z-index: 1;
+  background: white;
+  transition: opacity 500ms;
 }
 main .restaurant div .restaurant-card .like .fa-regular:active, main .restaurant div .restaurant-card .like .fa-regular:hover {
-  visibility: hidden;
+  opacity: 0;
 }
 main .restaurant div .restaurant-card .like .fa-solid {
   position: relative;
@@ -326,11 +328,6 @@ main .restaurant div .restaurant-card .like .fa-solid {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-main .restaurant div .restaurant-card .like .fa-solid:active, main .restaurant div .restaurant-card .like .fa-solid:hover {
-  opacity: 1;
 }
 
 footer {
